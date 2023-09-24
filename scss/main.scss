@@ -6,7 +6,6 @@ $quaternary-color: #FA9500;
 $font-stack: 'IBM Plex Sans', sans-serif;
 $paragraph-size: 1.5em;
 
-
 @mixin flexCenter($direction,$content,$align){
     display: flex;
     flex-direction: $direction;
@@ -20,7 +19,6 @@ $paragraph-size: 1.5em;
         border-style: none;
     }
 }
-
 
 body{
     margin: 0px;
@@ -73,6 +71,10 @@ article{
         border-radius: 35px;
         color: white;
         font-size: 1em;
+        &:hover{
+            transform: scale(1.1);
+            transition-duration: 0.3s;
+        }
     }
     img{
             width: 25vw;
@@ -87,7 +89,6 @@ section{
      h2{
         color: $primary-text-color;
         font-size: 2em;
-
     }
     .healthcare{
         padding-bottom: 60px;
@@ -141,14 +142,85 @@ section{
             background-color: $tertiary-color;
             color: white;
         }
-
     }
 }
 
+.about-us{
+    padding-bottom: 60px;
+    h2{
+        font-weight: bold;
+        padding-bottom: 60px;
+    }
+    .mission-section{
+        @include flexCenter(row, space-evenly, center);
+        .earth{
+            $text-color: #E86424;
+            width: 30vw;
+            display: flex;
+            gap: 40px;
+            color: $text-color;
 
+            img{
+                object-fit: contain;
+            }
+
+            P{
+                text-align: center;
+                font-size: $paragraph-size;
+            }
+        }
+    }
+    .innovation{
+        @extend .earth
+    }
+}
+
+.gallery{
+    h2{
+        font-weight: bold;
+        padding-bottom: 60px;
+    }
+    .gallery-images{
+        @include flexCenter(row, space-between, center);
+        img{
+            width: 28vw;
+            height: 45vh;
+            object-fit: cover;
+            object-position: 5px 35%;
+            border-radius: 16px;
+            &:hover{
+                transform: scale(1.1);
+                transition-duration: 0.3s;
+            }
+        }
+    }
+}
+
+.location{
+    $text-color: #E86424;
+    color: $text-color;
+    h2{
+        padding-bottom: 60px;
+        padding-top: 60px;
+    }
+    .map{
+        @include flexCenter(row, center ,center);
+        padding-bottom: 50px;
+    }
+    h3, p{
+        font-size: $paragraph-size;
+    }
+}
 
 footer{
     background-color: $quaternary-color;
     width: 100%;
-    height: 250px;
+    height: auto;
+    padding: 40px;
+    color: white;
+    .social-media{
+        @include flexCenter(row, center, center);
+        gap: 40px;
+        padding-bottom: 40px;
+    }
 }
