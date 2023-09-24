@@ -5,7 +5,7 @@ Una Landing Page linda con Sass para el [curso de Sass: Tu primera Landing Page]
 
 ## En este curso vemos de todo
 * Herramientas para VSC
-* Estructuras secciones en HTML
+* Estructurar secciones en HTML
 * Un preprocesador de CSS
 * Variables locales y globales
 * Manejo de selectores
