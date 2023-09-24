@@ -135,6 +135,10 @@ section .healthcare .product-card .product-image img, section .furniture .produc
      object-fit: cover;
   border-radius: 6px;
 }
+section .healthcare .product-card .product-image img:hover, section .furniture .product-card .product-image img:hover {
+  transform: scale(1.1);
+  transition-duration: 0.3s;
+}
 section .furniture .product-card {
   background-color: #BABD8D;
   color: white;

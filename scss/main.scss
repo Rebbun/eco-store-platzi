@@ -132,6 +132,10 @@ section{
                     height: 30vh;
                     object-fit: cover;
                     border-radius: 6px;
+                    &:hover{
+                        transform: scale(1.1);
+                        transition-duration: 0.3s;
+                    }
                 }
             }  
         }
